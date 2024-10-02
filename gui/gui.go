@@ -1,6 +1,5 @@
 package gui
 
-
 import (
 	"bytes"
 	"image"
@@ -10,6 +9,7 @@ import (
 	"sync/atomic"
 
 	"github.com/aarzilli/nucular"
+	"github.com/aarzilli/nucular/font"
 	"github.com/aarzilli/nucular/label"
 	"github.com/aarzilli/nucular/style"
 	"github.com/rocketsoftware/open-web-launch/utils"
@@ -116,7 +116,7 @@ func (gui *GUI) makeStyle() *style.Style {
 	if err != nil {
 		log.Printf("warning: %v\n", err)
 	}
-	style.Font = myFont
+	style.Font = font.Face{Face: myFont}
 	return style
 }
 
